@@ -1,0 +1,47 @@
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Process.csv" AS row 
+CREATE (P:Process) 
+SET P = row
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Decision.csv" AS row 
+CREATE (D:Decision) 
+SET D = row
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/PhysicalComponent.csv" AS row 
+CREATE (PC:PhysicalComponent) 
+SET PC = row
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/VirtualComponent.csv" AS row 
+CREATE (VC:VirtualComponent) 
+SET VC = row
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Process-NextStep-Process.csv" AS row
+MATCH (P1:Process{Process_Name: row.FirstProcess}),(P2:Process{Process_Name: row.SecondProcess})
+MERGE (P1)-[PP:NextStep{NextStepID: row.NextStep_ID}]->(P2)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Process-HasDecision-Decision.csv" AS row
+MATCH (P:Process{Process_Name: row.Process}),(D:Decision{Decision_Name: row.Decision})
+MERGE (P)-[PD:HasDecision{HasDecisionID: row.HasDecision_ID}]->(D)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Decision-PositiveCase-Process.csv" AS row
+MATCH (P:Process{Process_Name: row.Process}),(D:Decision{Decision_Name: row.Decision})
+MERGE (D)-[DPP:PositiveCase{PositiveCaseID: row.PositiveCase_ID}]->(P)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Decision-NegativeCase-Process.csv" AS row
+MATCH (P:Process{Process_Name: row.Process}),(D:Decision{Decision_Name: row.Decision})
+MERGE (D)-[DPN:NegativeCase{NegativeCaseID: row.NegativeCase_ID}]->(P)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/PhysicalComponent-Monitor-Process.csv" AS row
+MATCH (P:Process{Process_Name: row.Process}),(PC:PhysicalComponent{Physical_Component_Name: row.PhysicalComponent})
+MERGE (PC)-[M:Monitor{MonitorID: row.Monitor_ID}]->(P)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/PhysicalComponent-Monitor-Decision.csv" AS row
+MATCH (D:Decision{Decision_Name: row.Decision}),(PC:PhysicalComponent{Physical_Component_Name: row.PhysicalComponent})
+MERGE (PC)-[M:Monitor{MonitorID: row.Monitor_ID}]->(D)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Process-PhysicalOperate-PhysicalComponent.csv" AS row
+MATCH (P:Process{Process_Name: row.Process}),(PC:PhysicalComponent{Physical_Component_Name: row.PhysicalComponent})
+MERGE (P)-[PO:PhysicalOperate{PhysicalOperateID: row.PhysicalOperate_ID,OperationPattern: row.OperationPattern}]->(PC)
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/CashLee13024/PPOP/main/Process-VirtualOperate-VirtualComponent.csv" AS row
+MATCH (P:Process{Process_Name: row.Process}),(VC:VirtualComponent{Virtual_Component_Name: row.VirtualComponent})
+MERGE (P)-[VO:VirtualOperate{VirtualOperateID: row.VirtualOperate_ID,OperationPattern: row.OperationPattern}]->(VC)
