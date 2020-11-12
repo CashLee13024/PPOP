@@ -1,16 +1,16 @@
-Physical_Component_ID,Physical_Component_Name,
-1,Edge Computer,
-2,Edge Linker,
-3,PLC in Conveyor,
-4,PLC in E-box,
-5,Robot Controller,
-6,DMV,
-7,Line Camera,
-8,PCB,
-9,RFID,
-10,Conveyor,
-11,EdgeX,
-12,PPOP Machine,
-13,Cylinder,
-14,Robot Arm,
-15,Component,
+Physical_Component_ID,Physical_Component_Name
+1,Edge Computer
+2,Edge Linker
+3,PLC@Conveyor
+4,PLC@E-box
+5,Robot Controller
+6,DMV
+7,Line Camera
+8,PCB
+9,RFID
+10,Conveyor
+11,EdgeX
+12,PPOP Machine
+13,Cylinder
+14,Robot Arm
+15,Component
