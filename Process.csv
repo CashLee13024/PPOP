@@ -1,0 +1,41 @@
+﻿Process_ID,Process_Name,Process_Entity_Subject,Process_Entity_Object,Process_Operation,Process_Value
+1,Conveyor Transport PCB,Conveyor,PCB,Transport,
+2,RFID Read,,RFID,Read,
+3,Task Status = 0100,Task Status,,Equal,0100
+4,Convey Register Value to EdgeX - First,Register Value,EdgeX,Convey,
+5,Assign Task to PPOP Machine,Task,PPOP Machine,Assign,
+6,Cylinder Extend,Cylinder,,Extend,
+7,Conveyor Stop,Conveyor,,Stop,
+8,Task Status = 0200,Task Status,,Equal,0200
+9,PLC Activated,PLC@E-box,,Activate,
+10,PPOP Trigger = 0100,PPOP Machine,,Trigger,0100
+11,PLC Switch Files in DMV,PLC@E-box,File,Switch,
+12,Robot Arm Move to Image Capture Positions,Robot Arm,,Move,Image Capture Position
+13,DMV Capture Images for PCB Positioning,DMV,Image,Capture,
+14,Robot Arm Pick Component,Robot Arm,Component,Pick,
+15,Robot Arm Do on Fly Capture,Robot Arm,Component,Fly Capture,
+16,Robot Arm Throw Components at NG Box,Robot Arm,Component,Throw,NG Box
+17,Robot Arm Proceed to Insert Component,Robot Arm,Component,Insert,
+18,PPOP Done = 0100,PPOP Machine,,Done,0100
+19,Convey Register Value to EdgeX - Second,Register Value,EdgeX,Convey,
+20,Assign Task to PLC (Conveyor),Task,PLC@Conveyor,Assign,
+21,Cylinder Retract,Cylinder,,Retract,
+22,Conveyor Start,Conveyor,,Start,
+23,Task Status = 0000,Task Status,,Equal,0000
+24,PCB Leave,PCB,,Leave,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

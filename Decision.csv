@@ -1,0 +1,3 @@
+﻿Decision_ID,Decision_Name,Next_For_Positive,Next_For _Negative
+1,PCB in Detect,RFID Read,PCB in Detect
+2,Detect Components Pins,Robot Arm Proceed to Insert Component,Robot Arm Throw Components at NG Box

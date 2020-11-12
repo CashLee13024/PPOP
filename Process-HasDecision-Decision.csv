@@ -1,0 +1,3 @@
+HasDecision_ID,Process,Decision
+1,Conveyor Transport PCB,PCB in Detect
+2,Robot Arm Do on Fly Capture,Detect Components Pins

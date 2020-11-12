@@ -1,0 +1,25 @@
+﻿Monitor_ID,PhysicalComponent,Process
+1,PLC@Conveyor,Conveyor Transport PCB
+2,PLC@Conveyor,RFID Read
+3,PLC@Conveyor,Task Status = 0100
+4,PLC@Conveyor,Cylinder Extend
+5,PLC@Conveyor,Conveyor Stop
+6,PLC@Conveyor,Task Status = 0200
+7,PLC@Conveyor,Cylinder Retract
+8,PLC@Conveyor,Conveyor Start
+9,PLC@Conveyor,Task Status = 0000
+10,PLC@Conveyor,PCB Leave
+11,PLC@E-box,PLC Activated
+12,PLC@E-box,PPOP Trigger = 0100
+13,PLC@E-box,PLC Switch Files in DMV
+14,PLC@E-box,PPOP Done = 0100
+15,Edge Computer,Assign Task to PPOP Machine
+16,Edge Computer,Assign Task to PLC (Conveyor)
+17,Edge Linker,Convey Register Value to EdgeX - First
+18,Edge Linker,Convey Register Value to EdgeX - Second
+19,DMV,DMV Capture Images for PCB Positioning
+20,Robot Controller,Robot Arm Move to Image Capture Positions
+21,Robot Controller,Robot Arm Pick Component
+22,Robot Controller,Robot Arm Do on Fly Capture
+23,Robot Controller,Robot Arm Throw Components at NG Box
+24,Robot Controller,Robot Arm Proceed to Insert Component

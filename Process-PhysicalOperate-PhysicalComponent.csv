@@ -1,0 +1,27 @@
+﻿PhysicalOperate_ID,Process,PhysicalComponent,OperationPattern
+1,Conveyor Transport PCB,Conveyor,Subjective
+2,Conveyor Transport PCB,PCB,Objective
+3,RFID Read,RFID,Objective
+4,Convey Register Value to EdgeX - First,EdgeX,Objective
+5,Assign Task to PPOP Machine,PPOP Machine,Objective
+6,Cylinder Extend,Cylinder,Subjective
+7,Conveyor Stop,Conveyor,Subjective
+8,PLC Activated,PLC@E-box,Subjective
+9,PPOP Trigger = 0100,PPOP Machine,Subjective
+10,PLC Switch Files in DMV,PLC@E-box,Subjective
+11,Robot Arm Move to Image Capture Positions,Robot Arm,Subjective
+12,DMV Capture Images for PCB Positioning,DMV,Subjective
+13,Robot Arm Pick Component,Robot Arm,Subjective
+14,Robot Arm Do on Fly Capture,Robot Arm,Subjective
+15,Robot Arm Throw Components at NG Box,Robot Arm,Subjective
+16,Robot Arm Proceed to Insert Component,Robot Arm,Subjective
+17,PPOP Done = 0100,PPOP Machine,Subjective
+18,Robot Arm Pick Component,Component,Objective
+19,Robot Arm Do on Fly Capture,Component,Objective
+20,Robot Arm Throw Components at NG Box,Component,Objective
+21,Robot Arm Proceed to Insert Component,Component,Objective
+22,Convey Register Value to EdgeX - Second,EdgeX,Objective
+23,Assign Task to PLC (Conveyor),PLC@Conveyor,Objective
+24,Cylinder Retract,Cylinder,Subjective
+25,Conveyor Start,Conveyor,Subjective
+26,PCB Leave,PCB,Subjective

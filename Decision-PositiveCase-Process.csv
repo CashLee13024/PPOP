@@ -1,0 +1,3 @@
+PositiveCase_ID,Decision,Process
+1,PCB in Detect,RFID Read
+2,Detect Components Pins,Robot Arm Proceed to Insert Component

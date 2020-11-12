@@ -1,0 +1,26 @@
+﻿NextStep_ID,FirstProcess,SecondProcess
+1,RFID Read,Task Status = 0100
+2,Task Status = 0100,Cylinder Extend
+3,Task Status = 0100,Convey Register Value to EdgeX
+4,Convey Register Value to EdgeX - First,Assign Task to PPOP Machine
+5,Assign Task to PPOP Machine,Cylinder Extend
+6,Assign Task to PPOP Machine,PLC Activated
+7,Assign Task to PPOP Machine,PLC Switch Files in DMV
+8,Assign Task to PPOP Machine,Robot Arm Move to Image Capture Positions
+9,Assign Task to PPOP Machine,DMV Capture Images for PCB Positioning
+10,Cylinder Extend,Conveyor Stop
+11,Conveyor Stop,Task Status = 0200
+12,Task Status = 0200,Convey Register Value to EdgeX - First
+13,PLC Activated,PPOP Trigger = 0100
+14,PPOP Trigger = 0100,Convey Register Value to EdgeX - First
+15,Robot Arm Move to Image Capture Positions,DMV Capture Images for PCB Positioning
+16,DMV Capture Images for PCB Positioning,Robot Arm Pick Component
+17,Robot Arm Pick Component,Robot Arm Do on Fly Capture
+18,Robot Arm Proceed to Insert Component,PPOP Done = 0100
+19,PPOP Done = 0100,Convey Register Value to EdgeX - Second
+20,Convey Register Value to EdgeX - Second,Assign Task to PLC (Conveyor)
+21,Assign Task to PLC (Conveyor),Cylinder Retract
+22,Cylinder Retract,Conveyor Start
+23,Conveyor Start,Task Status = 0000
+24,Task Status = 0000,Convey Register Value to EdgeX - Second
+25,Task Status = 0000,PCB Leave

@@ -1,0 +1,13 @@
+﻿VirtualOperate_ID,Process,VirtualComponent,OperationPattern
+1,Task Status = 0100,Task,Subjective
+2,Task Status = 0100,Task Status,Subjective
+3,Convey Register Value to EdgeX - First,Register Value,Subjective
+4,Assign Task to PPOP Machine,Task,Subjective
+5,Task Status = 0200,Task,Subjective
+6,Task Status = 0200,Task Status,Subjective
+7,PLC Switch Files in DMV,File,Objective
+8,DMV Capture Images for PCB Positioning,Image,Objective
+9,Convey Register Value to EdgeX - Second,Register Value,Subjective
+10,Assign Task to PLC (Conveyor),Task,Subjective
+11,Task Status = 0000,Task,Subjective
+12,Task Status = 0000,Task Status,Subjective
